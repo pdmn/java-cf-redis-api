@@ -5,7 +5,7 @@ License: MIT
 Application.java contains the main execution code for the java-cf-redis-api app.
  */
 
-package java-cf-redis-api;
+package java_cf_redis_api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
