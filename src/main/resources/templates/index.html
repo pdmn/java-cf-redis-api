@@ -5,10 +5,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<p th:text="'Java Version: ' + ${javaVersion}" />
-<p th:text="'Java Vendor: ' + ${javaVendor}" />
-<p th:text="'Java Home: ' + ${javaHome}" />
-<p th:text="'Class Path: ' + ${classPath}" />
-<p th:text="'Operating System: ' + ${operatingSystem}" />
+<p><b>Java Version:</b>&nbsp;&nbsp;<span th:text="${javaVersion}" /></p>
+<p><b>Java Vendor:</b>&nbsp;&nbsp;<span th:text="${javaVendor}" /></p>
+<p><b>Java Home:</b>&nbsp;&nbsp;<span th:text="${javaHome}" /></p>
+<p><b>Class Path:</b>&nbsp;&nbsp;<span th:text="${classPath}" /></p>
+<p><b>Operating System:</b>&nbsp;&nbsp;<span th:text="${operatingSystem}" /></p>
 </body>
 </html>
