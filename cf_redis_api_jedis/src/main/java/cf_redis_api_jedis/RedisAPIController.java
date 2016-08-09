@@ -5,7 +5,7 @@
  * RestController routes for the Redis api endpoints.
  */
 
-package cf_redis_api;
+package cf_redis_api_jedis;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;

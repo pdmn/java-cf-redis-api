@@ -48,11 +48,6 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-spring-service-connector</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.cloudfoundry</groupId>
-            <artifactId>auto-reconfiguration</artifactId>
-            <version>1.7.0.RELEASE</version>
-        </dependency>
     </dependencies>
 
     <properties>

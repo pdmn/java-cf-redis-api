@@ -4,7 +4,7 @@
  *
  * Controller for the index.html status page.
  */
-package cf_redis_api;
+package cf_redis_api_jedis;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
