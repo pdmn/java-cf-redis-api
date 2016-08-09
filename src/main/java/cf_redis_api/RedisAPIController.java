@@ -7,7 +7,6 @@
 
 package cf_redis_api;
 
-
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -40,6 +39,7 @@ public class RedisAPIController {
 
         value = valueOps.get(key);
 
+        // Null value means no key, return 404.
         if (value == null) {
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
