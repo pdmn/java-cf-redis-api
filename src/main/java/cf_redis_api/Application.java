@@ -7,17 +7,20 @@
 
 package cf_redis_api;
 
-import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.context.ApplicationContext;
+import org.springframework.boot.SpringApplication;
 
 @SpringBootApplication
-@EnableWebMvc
+/*
+ * Disable security auto configuration for now, or it will require authentication. Should probably do this
+ * In a smarter way that only allows specific routes at some point. This works for now.
+ */
+@EnableAutoConfiguration(exclude={org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration.class})
 public class Application {
 
     public static void main(String[] args) {
-        ApplicationContext ctx = SpringApplication.run(Application.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
 }
