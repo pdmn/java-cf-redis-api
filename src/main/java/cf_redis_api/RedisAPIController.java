@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.beans.factory.annotation.Autowired;
 import javax.annotation.Resource;
 
-import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -27,9 +26,6 @@ import java.util.HashMap;
 
 @RestController
 public class RedisAPIController {
-
-    @Autowired
-    private JedisConnectionFactory jedisConnectionFactory;
 
     @Autowired
     private RedisTemplate<String, String> redisTemplate;
@@ -72,16 +68,14 @@ public class RedisAPIController {
     public ResponseEntity<?> deleteKey(@PathVariable String key) {
         Map<String, Object> output = new HashMap<String, Object>();
         String value;
-        int result;
+        int result = 0;
 
+        value = valueOps.get(key);
         // Result 1 if key exists and is deleted. Result 0 if no key to delete.
-        if (redisTemplate.hasKey(key)) {
+        if (value != null) {
             valueOps.getOperations().delete(key);
             result = 1;
-        } else {
-            result = 0;
         }
-
 
         output.put("result", result);
         return new ResponseEntity<Map>(output, HttpStatus.OK);
