@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Redis Test API for CloudFoundry</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p><b>Java Version:</b>&nbsp;&nbsp;<span th:text="${javaVersion}" /></p>
+<p><b>Java Vendor:</b>&nbsp;&nbsp;<span th:text="${javaVendor}" /></p>
+<p><b>Java Home:</b>&nbsp;&nbsp;<span th:text="${javaHome}" /></p>
+<p><b>Class Path:</b>&nbsp;&nbsp;<span th:text="${classPath}" /></p>
+<p><b>Operating System:</b>&nbsp;&nbsp;<span th:text="${operatingSystem}" /></p>
+<p><b>Redis Host:</b>&nbsp;&nbsp;<span th:text="${redisHost}" /></p>
+
+<!--
+<h2>Redis Instances</h2>
+<div th:each="name : ${redisInstanceNames}">
+    <h3 th:text="${name}"/>
+    <p th:text="'Host: ' + ${redisInstances[name]['host']}"/>
+    <p th:text="'Port: ' + redisInstances[name]['port']}"/>
+</div>
+-->
+</body>
+</html>
