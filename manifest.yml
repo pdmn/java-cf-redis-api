@@ -1,0 +1,7 @@
+---
+applications:
+- name: cf-redis-api
+  memory: 512M
+  instances: 1
+  buildpack: java-buildpack
+  stack: cflinuxfs2
